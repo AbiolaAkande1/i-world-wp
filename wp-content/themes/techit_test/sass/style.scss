@@ -1,0 +1,121 @@
+/*!
+Theme Name: TechIT
+Theme URI: http://underscores.me/
+Author: Abiola Akande
+Author URI: http://underscores.me/
+Description: This is my TechIt assessment
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: techit_test
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+TechIT is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+	- Colors
+	- Fonts Sizes
+    - Media Queries
+    - Import Fonts
+	- Layout
+	- Module
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+	// Colors
+--------------------------------------------------------------*/
+$primary-color:#EBF5DA;
+$secondary-color:#003333;
+$tertiary-color: #FFFFFF;
+$bg-color: #F5F5F5;
+$button-color: #F58634;
+$header-text-color: #414141;
+$text-color:#1E1E1E;
+
+/*--------------------------------------------------------------
+	// Font Sizes
+--------------------------------------------------------------*/
+$smallest-sizing: 12px;
+$smaller-sizing: 14.8px;
+$small-sizing: 16px;
+$medium-sizing: 20px;
+$large-sizing: 24px;
+$larger-sizing: 40px;
+$hero-text: 48px;
+
+/*--------------------------------------------------------------
+	// Media Queries
+--------------------------------------------------------------*/
+@mixin respond($breakpoint) {
+    @if $breakpoint ==sm {
+        @media only screen and (min-width: 40em) {
+            @content;
+        }
+
+        //640px
+    }
+
+    @if $breakpoint ==md {
+        @media only screen and (min-width: 48em) {
+            @content;
+        }
+
+        //768px
+    }
+
+    @if $breakpoint ==lg {
+        @media only screen and (min-width: 64em) {
+            @content;
+        }
+
+        //1024px
+    }
+
+    @if $breakpoint ==xl {
+        @media only screen and (min-width: 80em) {
+            @content;
+        }
+
+        //1280px
+    }
+
+    @if $breakpoint ==2xl {
+        @media only screen and (max-width: 96em) {
+            @content;
+        }
+
+        //1536px
+    }
+}
+
+/*--------------------------------------------------------------
+	// Import Fonts
+--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/*--------------------------------------------------------------
+	// Layout
+--------------------------------------------------------------*/
+@import "./custom/layout.scss";
+
+/*--------------------------------------------------------------
+	// Module
+--------------------------------------------------------------*/
+@import "./custom/module.scss";
+
+
+
+
+
